@@ -7,8 +7,41 @@
     <groupId>com.rodion</groupId>
     <artifactId>silvermill-rest</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+    <modules>
+        <module>silvermill-rest-service</module>
+        <module>silvermill-rest-model</module>
+        <module>silvermill-rest-model-mapper</module>
+    </modules>
 
     <packaging>pom</packaging>
+
+    <properties>
+        <spring.web.version>4.3.9.RELEASE</spring.web.version>
+        <logger.version>1.7.25</logger.version>
+        <silvermill.data.version>0.0.1-SNAPSHOT</silvermill.data.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-web</artifactId>
+                <version>${spring.web.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>${logger.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.rodion</groupId>
+                <artifactId>silvermill-data-client</artifactId>
+                <version>${silvermill.data.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
 
 </project>

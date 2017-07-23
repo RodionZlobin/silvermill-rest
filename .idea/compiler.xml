@@ -1,8 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="silvermill-rest-model" />
+        <module name="silvermill-rest-model-mapper" />
+        <module name="silvermill-rest-service" />
+      </profile>
+    </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="silvermill-rest" target="1.5" />
+      <module name="silvermill-rest-model" target="1.5" />
+      <module name="silvermill-rest-model-mapper" target="1.5" />
+      <module name="silvermill-rest-service" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>
