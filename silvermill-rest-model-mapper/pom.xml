@@ -11,5 +11,16 @@
 
     <artifactId>silvermill-rest-model-mapper</artifactId>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.rodion</groupId>
+            <artifactId>silvermill-rest-model</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.rodion</groupId>
+            <artifactId>silvermill-data-domain</artifactId>
+        </dependency>
+    </dependencies>
+
 
 </project>

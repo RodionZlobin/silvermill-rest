@@ -1,13 +1,18 @@
 package com.rodion.silvermillrest.service;
 
 import com.rodion.silvermilldata.client.UserClient;
+import com.rodion.silvermilldata.domain.User;
+import com.rodion.silvermillrest.mapper.UserModelMapper;
+import com.rodion.silvermillrest.model.UserModel;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Objects;
 
-/**Œ
+/**
  * @author Rodion
  */
 
@@ -21,12 +26,28 @@ public class UserRestService {
     private final static Logger LOGGER = LoggerFactory.getLogger(UserRestService.class);
     private final UserClient userClient;
 
-
-
     public UserRestService(UserClient userClient) {
         this.userClient = Objects.requireNonNull(userClient, "userClient cannot be null");
     }
-/*
+
+    @RequestMapping(value = "/{username}", method = RequestMethod.GET)
+    public ResponseEntity<UserModel> getUser(@PathVariable String username){
+
+        User user = userClient.findUserByUsername(username);
+        UserModel userModel = UserModelMapper.map(user);
+        return new ResponseEntity<>(userModel, HttpStatus.OK);
+    }
+
+    @RequestMapping(value = "/users", method = RequestMethod.GET)
+    public ResponseEntity<UserModel> getUsers(){
+        return null;
+    }
+
+    @RequestMapping(value = "", method = RequestMethod.POST)
+    public ResponseEntity<UserModel> createUser(){
+        return null;
+    }
+    /*
 
     @RequestMapping(method = RequestMethod.GET)
     @ResponseBody

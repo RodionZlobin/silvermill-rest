@@ -11,11 +11,11 @@
         <module name="silvermill-rest-service" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="silvermill-rest" target="1.5" />
-      <module name="silvermill-rest-model" target="1.5" />
-      <module name="silvermill-rest-model-mapper" target="1.5" />
-      <module name="silvermill-rest-service" target="1.5" />
+    <bytecodeTargetLevel target="1.8">
+      <module name="silvermill-rest" target="1.8" />
+      <module name="silvermill-rest-model" target="1.8" />
+      <module name="silvermill-rest-model-mapper" target="1.8" />
+      <module name="silvermill-rest-service" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
