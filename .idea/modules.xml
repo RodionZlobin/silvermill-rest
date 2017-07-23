@@ -3,6 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/silvermill-rest.iml" filepath="$PROJECT_DIR$/silvermill-rest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/silvermill-rest-model/silvermill-rest-model.iml" filepath="$PROJECT_DIR$/silvermill-rest-model/silvermill-rest-model.iml" />
+      <module fileurl="file://$PROJECT_DIR$/silvermill-rest-model-mapper/silvermill-rest-model-mapper.iml" filepath="$PROJECT_DIR$/silvermill-rest-model-mapper/silvermill-rest-model-mapper.iml" />
+      <module fileurl="file://$PROJECT_DIR$/silvermill-rest-service/silvermill-rest-service.iml" filepath="$PROJECT_DIR$/silvermill-rest-service/silvermill-rest-service.iml" />
     </modules>
   </component>
 </project>
