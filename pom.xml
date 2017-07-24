@@ -7,18 +7,22 @@
     <groupId>com.rodion</groupId>
     <artifactId>silvermill-rest</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+
+    <packaging>pom</packaging>
+
     <modules>
         <module>silvermill-rest-service</module>
         <module>silvermill-rest-model</module>
         <module>silvermill-rest-model-mapper</module>
     </modules>
 
-    <packaging>pom</packaging>
 
     <properties>
         <maven.compiler.plugin.version>3.6.1</maven.compiler.plugin.version>
         <spring.web.version>4.3.9.RELEASE</spring.web.version>
         <logger.version>1.7.25</logger.version>
+        <tomcat.api.version>8.5.16</tomcat.api.version>
+        <fasterxml.jackson.version>2.8.9</fasterxml.jackson.version>
         <silvermill.data.version>0.0.1-SNAPSHOT</silvermill.data.version>
         <silvermill.rest.version>0.0.1-SNAPSHOT</silvermill.rest.version>
     </properties>
@@ -26,6 +30,37 @@
     <dependencyManagement>
         <dependencies>
 
+            <dependency>
+                <groupId>com.rodion</groupId>
+                <artifactId>silvermill-data-client</artifactId>
+                <version>${silvermill.data.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.rodion</groupId>
+                <artifactId>silvermill-data-dao</artifactId>
+                <version>${silvermill.data.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.rodion</groupId>
+                <artifactId>silvermill-data-dao-impl</artifactId>
+                <version>${silvermill.data.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.rodion</groupId>
+                <artifactId>silvermill-data-domain</artifactId>
+                <version>${silvermill.data.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.rodion</groupId>
+                <artifactId>silvermill-data-service</artifactId>
+                <version>${silvermill.data.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.rodion</groupId>
+                <artifactId>silvermill-data-service-impl</artifactId>
+                <version>${silvermill.data.version}</version>
+            </dependency>
             <dependency>
                 <groupId>com.rodion</groupId>
                 <artifactId>silvermill-rest-model</artifactId>
@@ -37,23 +72,18 @@
                 <version>${silvermill.rest.version}</version>
             </dependency>
 
-            <dependency>
-                <groupId>com.rodion</groupId>
-                <artifactId>silvermill-data-client</artifactId>
-                <version>${silvermill.data.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.rodion</groupId>
-                <artifactId>silvermill-data-domain</artifactId>
-                <version>${silvermill.data.version}</version>
-            </dependency>
-
 
             <dependency>
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-web</artifactId>
                 <version>${spring.web.version}</version>
             </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-webmvc</artifactId>
+                <version>${spring.web.version}</version>
+            </dependency>
+
 
             <dependency>
                 <groupId>org.slf4j</groupId>
@@ -63,6 +93,19 @@
 
         </dependencies>
     </dependencyManagement>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.tomcat</groupId>
+            <artifactId>tomcat-servlet-api</artifactId>
+            <version>${tomcat.api.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>${fasterxml.jackson.version}</version>
+        </dependency>
+    </dependencies>
 
     <build>
         <plugins>
