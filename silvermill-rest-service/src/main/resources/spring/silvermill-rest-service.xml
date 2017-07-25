@@ -9,4 +9,8 @@
     <import resource="classpath*:silvermill-data-service.xml"/>
     <import resource="classpath*:silvermill-data-client.xml"/>
 
+    <bean id="userRestService" class="com.rodion.silvermillrest.service.UserRestService">
+        <constructor-arg ref="userClient"/>
+    </bean>
+
 </beans>

@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="silvermill-rest-development" />
         <module name="silvermill-rest-model" />
         <module name="silvermill-rest-model-mapper" />
         <module name="silvermill-rest-service" />
@@ -13,6 +14,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
       <module name="silvermill-rest" target="1.8" />
+      <module name="silvermill-rest-development" target="1.8" />
       <module name="silvermill-rest-model" target="1.8" />
       <module name="silvermill-rest-model-mapper" target="1.8" />
       <module name="silvermill-rest-service" target="1.8" />
