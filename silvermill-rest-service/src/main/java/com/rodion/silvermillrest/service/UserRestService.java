@@ -10,6 +10,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 import java.util.Objects;
 
@@ -35,6 +36,9 @@ public class UserRestService {
 
     @RequestMapping(value = "/{username}", method = RequestMethod.GET)
     public ResponseEntity<UserModel> getUser(@PathVariable String username){
+
+        //public ResponseEntity<UserModel> getUser(HttpServletRequest request, @PathVariable String username){
+        //String requestHeader = request.getHeader("INFO");
 
         User user = userClient.findUserByUsername(username);
         UserModel userModel = UserModelMapper.map(user);
