@@ -14,6 +14,7 @@
         <module>silvermill-rest-service</module>
         <module>silvermill-rest-model</module>
         <module>silvermill-rest-model-mapper</module>
+        <module>silvermill-rest-development</module>
     </modules>
 
 
@@ -69,6 +70,11 @@
             <dependency>
                 <groupId>com.rodion</groupId>
                 <artifactId>silvermill-rest-model-mapper</artifactId>
+                <version>${silvermill.rest.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.rodion</groupId>
+                <artifactId>silvermill-rest-service</artifactId>
                 <version>${silvermill.rest.version}</version>
             </dependency>
 

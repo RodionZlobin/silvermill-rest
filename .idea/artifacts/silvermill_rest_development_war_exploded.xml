@@ -1,12 +1,15 @@
 <component name="ArtifactManager">
-  <artifact type="exploded-war" name="silvermill-rest-service:war exploded">
-    <output-path>$PROJECT_DIR$/silvermill-rest-service/target/silvermill-rest-service-0.0.1-SNAPSHOT</output-path>
+  <artifact type="exploded-war" name="silvermill-rest-development:war exploded">
+    <output-path>$PROJECT_DIR$/silvermill-rest-development/target/silvermill-rest-development-0.0.1-SNAPSHOT</output-path>
     <root id="root">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
-          <element id="module-output" name="silvermill-rest-service" />
+          <element id="module-output" name="silvermill-rest-development" />
         </element>
         <element id="directory" name="lib">
+          <element id="archive" name="silvermill-rest-service-0.0.1-SNAPSHOT.jar">
+            <element id="module-output" name="silvermill-rest-service" />
+          </element>
           <element id="library" level="project" name="Maven: com.rodion:silvermill-data-client:0.0.1-SNAPSHOT" />
           <element id="library" level="project" name="Maven: com.rodion:silvermill-data-domain:0.0.1-SNAPSHOT" />
           <element id="library" level="project" name="Maven: com.rodion:silvermill-data-dao:0.0.1-SNAPSHOT" />
@@ -47,9 +50,9 @@
         </element>
       </element>
       <element id="directory" name="META-INF">
-        <element id="file-copy" path="$PROJECT_DIR$/silvermill-rest-service/target/silvermill-rest-service-0.0.1-SNAPSHOT/META-INF/MANIFEST.MF" />
+        <element id="file-copy" path="$PROJECT_DIR$/silvermill-rest-development/target/silvermill-rest-development-0.0.1-SNAPSHOT/META-INF/MANIFEST.MF" />
       </element>
-      <element id="javaee-facet-resources" facet="silvermill-rest-service/web/Web" />
+      <element id="javaee-facet-resources" facet="silvermill-rest-development/web/Web" />
     </root>
   </artifact>
 </component>

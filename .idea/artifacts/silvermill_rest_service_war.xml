@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" name="silvermill-rest-service:war">
-    <output-path>$PROJECT_DIR$/silvermill-rest-service/target</output-path>
-    <root id="archive" name="silvermill-rest-service-0.0.1-SNAPSHOT.war">
-      <element id="artifact" artifact-name="silvermill-rest-service:war exploded" />
-    </root>
-  </artifact>
-</component>
