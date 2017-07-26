@@ -6,6 +6,7 @@ import com.rodion.silvermillrest.mapper.UserModelMapper;
 import com.rodion.silvermillrest.model.UserModel;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -35,15 +36,21 @@ public class UserRestService {
 
 
     @RequestMapping(value = "/{username}", method = RequestMethod.GET)
-    public ResponseEntity<UserModel> getUser(@PathVariable String username){
+    //public ResponseEntity<UserModel> getUser(@PathVariable String username){
 
-        //public ResponseEntity<UserModel> getUser(HttpServletRequest request, @PathVariable String username){
+        public ResponseEntity<UserModel> getUser(HttpServletRequest request, @PathVariable String username){
+
+        //if needs to read request header
         //String requestHeader = request.getHeader("INFO");
+
+        //axios needs this header value
+        HttpHeaders responseHeaders = new HttpHeaders();
+        responseHeaders.add("Access-Control-Allow-Origin", "*");
 
         User user = userClient.findUserByUsername(username);
         UserModel userModel = UserModelMapper.map(user);
 
-        return new ResponseEntity<>(userModel, HttpStatus.OK);
+        return new ResponseEntity<>(userModel, responseHeaders, HttpStatus.OK);
     }
 
     @RequestMapping(value = "/users", method = RequestMethod.GET)
