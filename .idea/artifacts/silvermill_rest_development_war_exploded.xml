@@ -12,6 +12,11 @@
           </element>
           <element id="library" level="project" name="Maven: com.rodion:silvermill-data-client:0.0.1-SNAPSHOT" />
           <element id="library" level="project" name="Maven: com.rodion:silvermill-data-domain:0.0.1-SNAPSHOT" />
+          <element id="library" level="project" name="Maven: org.springframework.data:spring-data-mongodb:1.10.6.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-tx:4.3.10.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework.data:spring-data-commons:1.13.6.RELEASE" />
+          <element id="library" level="project" name="Maven: org.mongodb:mongo-java-driver:2.14.3" />
+          <element id="library" level="project" name="Maven: org.slf4j:jcl-over-slf4j:1.7.25" />
           <element id="library" level="project" name="Maven: com.rodion:silvermill-data-dao:0.0.1-SNAPSHOT" />
           <element id="library" level="project" name="Maven: com.rodion:silvermill-data-entity:0.0.1-SNAPSHOT" />
           <element id="library" level="project" name="Maven: com.google.guava:guava:22.0" />
@@ -19,11 +24,6 @@
           <element id="library" level="project" name="Maven: com.google.errorprone:error_prone_annotations:2.0.18" />
           <element id="library" level="project" name="Maven: com.google.j2objc:j2objc-annotations:1.1" />
           <element id="library" level="project" name="Maven: org.codehaus.mojo:animal-sniffer-annotations:1.14" />
-          <element id="library" level="project" name="Maven: org.springframework.data:spring-data-mongodb:1.10.4.RELEASE" />
-          <element id="library" level="project" name="Maven: org.springframework:spring-tx:4.3.9.RELEASE" />
-          <element id="library" level="project" name="Maven: org.springframework.data:spring-data-commons:1.13.4.RELEASE" />
-          <element id="library" level="project" name="Maven: org.mongodb:mongo-java-driver:2.14.3" />
-          <element id="library" level="project" name="Maven: org.slf4j:jcl-over-slf4j:1.7.25" />
           <element id="library" level="project" name="Maven: com.rodion:silvermill-data-dao-impl:0.0.1-SNAPSHOT" />
           <element id="library" level="project" name="Maven: com.rodion:silvermill-data-service:0.0.1-SNAPSHOT" />
           <element id="library" level="project" name="Maven: com.rodion:silvermill-data-service-impl:0.0.1-SNAPSHOT" />
