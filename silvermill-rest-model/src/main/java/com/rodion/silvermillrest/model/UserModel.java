@@ -7,12 +7,14 @@ import java.io.Serializable;
 /**
  * @author Rodion
  */
-public class UserModel extends ValueObject implements Serializable {
+public class UserModel extends ValueObject {
 
     private static final long serialVersionUID = 1L;
 
     private String username;
     private String password;
+
+    private UserModel(){}
 
     public UserModel(String username, String password) {
         this.username = username;
@@ -35,6 +37,7 @@ public class UserModel extends ValueObject implements Serializable {
         this.password = password;
     }
 
+    @Override
     protected Object[] getIdFields() {
         return new Object[]{username, password};
     }

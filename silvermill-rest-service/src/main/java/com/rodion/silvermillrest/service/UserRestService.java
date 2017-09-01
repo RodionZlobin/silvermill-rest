@@ -69,7 +69,7 @@ public class UserRestService {
 
         //@TODO create number generator
         User user = new User("5", username, password);
-        User createdUser = userClient.createUser(user);
+        User createdUser = userClient.createOrUpdateUser(user);
 
         UserModel userModel = UserModelMapper.map(createdUser);
         return new ResponseEntity<>(userModel, HttpStatus.OK);
