@@ -5,11 +5,14 @@ import com.rodion.silvermillrest.model.UserModel;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * @author Rodion
  */
-public class UserModelMapper {
+public final class UserModelMapper {
+
+    private UserModelMapper(){}
 
     public static UserModel map(User user){
         UserModel userModel = new UserModel(user.getUserName(), user.getPassword());
@@ -17,8 +20,7 @@ public class UserModelMapper {
     }
 
     public static List<UserModel> map(List<User> users){
-        List<UserModel> userModels = new ArrayList<>();
-        users.forEach(p -> userModels.add(UserModelMapper.map(p)));
-        return userModels;
+
+        return users.stream().map(UserModelMapper::map).collect(Collectors.toList());
     }
 }

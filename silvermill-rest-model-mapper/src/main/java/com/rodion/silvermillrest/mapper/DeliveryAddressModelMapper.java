@@ -6,15 +6,18 @@ import com.rodion.silvermillrest.model.DeliveryAddressModel;
 /**
  * @author Rodion
  */
-public class DeliveryAddressModelMapper {
+public final class DeliveryAddressModelMapper {
+
+    private DeliveryAddressModelMapper(){}
 
     public static DeliveryAddressModel map(DeliveryAddress deliveryAddress){
-        return new DeliveryAddressModel(deliveryAddress.getDeliveryAddressName(),
-                deliveryAddress.getStreet(),
-                deliveryAddress.getBuilding(),
-                deliveryAddress.getCity(),
-                deliveryAddress.getZipCode(),
-                deliveryAddress.getCountry(),
-                deliveryAddress.getPostBox());
+        return deliveryAddress == null ? null :
+                new DeliveryAddressModel(deliveryAddress.getAddressName(),
+                            deliveryAddress.getStreet(),
+                            deliveryAddress.getBuilding(),
+                            deliveryAddress.getCity(),
+                            deliveryAddress.getZipCode(),
+                            deliveryAddress.getCountry(),
+                            deliveryAddress.getPostBox());
     }
 }

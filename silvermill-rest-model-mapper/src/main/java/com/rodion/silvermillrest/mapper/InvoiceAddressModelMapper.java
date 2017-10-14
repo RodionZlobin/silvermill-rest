@@ -6,10 +6,13 @@ import com.rodion.silvermillrest.model.AddressModel;
 /**
  * @author Rodion
  */
-public class AddressModelMapper {
+public final class InvoiceAddressModelMapper {
+
+    private InvoiceAddressModelMapper(){}
 
     public static AddressModel map(Address address){
-        return new AddressModel(address.getAddressName(),
+        return address == null ? null :
+                new AddressModel(address.getAddressName(),
                                     address.getStreet(),
                                     address.getBuilding(),
                                     address.getCity(),

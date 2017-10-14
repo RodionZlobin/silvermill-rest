@@ -3,13 +3,15 @@ package com.rodion.silvermillrest.mapper;
 import com.rodion.silvermilldata.domain.Product;
 import com.rodion.silvermillrest.model.ProductModel;
 
-import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * @author Rodion
  */
-public class ProductModelMapper {
+public final class ProductModelMapper {
+
+    private ProductModelMapper(){}
 
     public static ProductModel map(Product product){
         return new ProductModel(product.getProductArticle(),
@@ -20,8 +22,7 @@ public class ProductModelMapper {
     }
 
     public static List<ProductModel> map(List<Product> products){
-        List<ProductModel> productModels = new ArrayList<>();
-        products.forEach(p -> productModels.add(ProductModelMapper.map(p)));
-        return productModels;
+
+        return products.stream().map(ProductModelMapper::map).collect(Collectors.toList());
     }
 }

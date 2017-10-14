@@ -3,26 +3,29 @@ package com.rodion.silvermillrest.mapper;
 import com.rodion.silvermilldata.domain.Customer;
 import com.rodion.silvermillrest.model.CustomerModel;
 
-import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * @author Rodion
  */
-public class CustomerModelMapper {
+public final class CustomerModelMapper {
+
+    private CustomerModelMapper(){}
 
     public static CustomerModel map(Customer customer){
-        return new CustomerModel(customer.getCustomerName(),
+        return customer == null ? null :
+                new CustomerModel(customer.getCustomerName(),
                                 customer.getCustomerVAT(),
                                 customer.getCustomerRegNumber(),
-                                AddressModelMapper.map(customer.getAddress()),
+                                InvoiceAddressModelMapper.map(customer.getAddress()),
                                 DeliveryAddressModelMapper.map(customer.getDeliveryAddress()));
 
     }
 
-    public static List<CustomerModel> map(List<Customer> customers){
-        List<CustomerModel> customerModels = new ArrayList<>();
-        customers.forEach(p -> customerModels.add(CustomerModelMapper.map(p)));
-        return customerModels;
+    public static List<CustomerModel> map(Collection<Customer> customers){
+
+        return customers.stream().map(CustomerModelMapper::map).collect(Collectors.toList());
     }
 }
